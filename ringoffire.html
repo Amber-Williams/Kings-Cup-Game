@@ -1,73 +1,127 @@
 
+<html>
+    <header>
+        <link rel = "stylesheet" type = "text/css" href = "https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" />
+    </header>
+    <body>
+        <div class="content">
+            <button onclick="cardDice();">Click me</button>
 
-<button onclick="cardDice();">Click me</button>
-
-<p id="demo"></p>
-
-<script>
-    function cardDice () {
-        var cardNum = Math.floor((Math.random() * 13) +1);
-        if (cardNum==1){
-        document.getElementById("demo").innerHTML= "Ace: Waterfall" + '<br/>'+'<img src="ace.png"/>';
-    }
-    else if (cardNum==2) {
-        document.getElementById("demo").innerHTML="Two: You pick someone to drink" + '<br/>'+'<img src="two.png"/>';
-
-    }
-    else if (cardNum==3) {
-        document.getElementById("demo").innerHTML="Three: Me...aka drink your drink bitch" + '<br/>'+'<img src="three.png"/>';
-
-    }
-    else if (cardNum==4) {
-        document.getElementById("demo").innerHTML="Four: Filthy Whores" + '<br/>'+'<img src="four.png"/>';
-
-    }
-    else if (cardNum==5) {
-        document.getElementById("demo").innerHTML="Five: Take a Drive" + '<br/>'+'<img src="five.png"/>';
-
-    }
-    else if (cardNum==6) {
-        document.getElementById("demo").innerHTML="Six: Dicks B=D B=D B=D" + '<br/>'+'<img src="six.png"/>';
-
-    }
-    else if (cardNum==7) {
-        document.getElementById("demo").innerHTML="Seven: Hands up toward da lord" + '<br/>'+'<img src="seven.png"/>';
-
-    }
-    else if (cardNum==8) {
-        document.getElementById("demo").innerHTML="Eight: Drank Mate" + '<br/>'+'<img src="eight.png"/>';
-
-    }
-    else if (cardNum==9) {
-        document.getElementById("demo").innerHTML="Nine: Bust a Rhyme" + '<br/>'+'<img src="nine.png"/>';
-
-    }
-    else if (cardNum==10) {
-        document.getElementById("demo").innerHTML="Ten: Categories" + '<br/>'+'<img src="ten.png"/>';
-
-    }
-    else if (cardNum==11) {
-        document.getElementById("demo").innerHTML="Jack: Throw it Back" + '<br/>'+'<img src="jack.png"/>';
-
-    }
-    else if (cardNum==12) {
-        document.getElementById("demo").innerHTML="Queen: Questionmaster" + '<br/>'+'<img src="queen.png"/>';
-
-    }
-    else if (cardNum==13) {
-        document.getElementById("demo").innerHTML="King: Make a rule for your peasents" + '<br/>'+'<img src="king.png"/>';
-
-    }
-    else {
-        return null;
-    }
-};
-    /*
-    switch(cardNum){
-        case 2:
-            document.getElementById("demo").innerHTML="Two: You pick someone to drink" + '<br/>'+'<img src="two.png"/>';
-            break;
-        case 3: 
-        */
+            <p id="demo"></p>
+        </div>
         
-</script>
+        
+            <img src="img/beer.png" class="beerImg1"/>
+            <img src="img/beer.png" class="beerImg2"/>
+        
+        <style>
+            .cardImg {
+                width:200px;
+            }
+            body {
+                background-color: #336600;
+                font-family: 'Helvetica';
+                color:white;
+            }
+            p {
+                
+            }
+            .beerImg1{
+                right:0;
+                bottom: 0;
+                position: absolute;
+                width:30%;
+            }
+            .beerImg2{
+                left:0;
+                bottom: 0;
+                position: absolute;
+                width:30%;
+                -moz-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                filter: FlipH;
+                -ms-filter: "FlipH";
+            }
+
+            .content {
+                position:absolute;
+                top:50%;
+                left:50%;
+                margin-left:-100px;/* half width*/
+                margin-top:-300px;/* half height*/
+            }
+            button {
+                position: relative;
+                color: #fff;
+                text-decoration: none;
+                background-color: #344960;
+                font-family: 'Helvetica';
+                font-weight: 700;
+                font-size: 2em;
+                padding: 4px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                -webkit-box-shadow: 0px 9px 0px #12273d;
+                -moz-box-shadow:0px 9px 0px #12273d;
+                box-shadow: 0px 9px 0px #12273d;
+                width: 160px;
+                text-align: center;
+                -webkit-transition: all .1s ease;
+                -moz-transition: all .1s ease;
+                -ms-transition: all .1s ease;
+                -o-transition: all .1s ease;
+                transition: all .1s ease;
+                margin-left:15px;
+                margin-bottom: 20px;
+            }
+            button:active {
+                -webkit-box-shadow: 0px 3px 0px #12273d;
+                -moz-box-shadow: 0px 3px 0px #12273d;
+                box-shadow: 0px 3px 0px #12273d;
+                position: relative;
+                top: 6px;
+            }
+            button:focus {
+                outline:0;
+            }
+        </style>
+        <script>
+            function cardDice () {
+            var cardBtn = '<button onclick="cardDice();">Click me</button>'
+            var myArray = [
+                "Ace: Waterfall." + '<br/>'+'<img class="cardImg" src="img/AS.png"/>',
+
+                "Two: You pick someone to drink" + '<br/>'+'<img class="cardImg" src="img/2S.png"/>',
+
+                "Three: Me...aka drink your drink bitch" + '<br/>'+'<img class="cardImg" src="img/3S.png"/>',
+
+                "Four: Filthy Whores" + '<br/>'+'<img class="cardImg" src="img/4S.png"/>',
+
+                "Five: Take a Drive" + '<br/>'+'<img class="cardImg" src="img/5S.png"/>',
+
+                "Six: Dicks B=D B=D B=D" + '<br/>'+'<img class="cardImg" src="img/6S.png"/>',
+
+                "Seven: Hands up toward da lord" + '<br/>'+'<img class="cardImg" src="img/7S.png"/>',
+
+                "Eight: Drank Mate" + '<br/>'+'<img class="cardImg" src="img/8S.png"/>',
+
+                "Nine: Bust a Rhyme" + '<br/>'+'<img class="cardImg" src="img/9S.png"/>',
+
+                "Ten: Categories" + '<br/>'+'<img class="cardImg" src="img/10S.png"/>',
+
+                "Jack: Throw it Back" + '<br/>'+'<img class="cardImg" src="img/JS.png"/>',
+
+                "Queen: Questionmaster" + '<br/>'+'<img class="cardImg" src="img/QS.png"/>',
+
+                "King: Make a rule for your peasents" + '<br/>'+'<img class="cardImg" src="img/KS.png"/>'
+            ];
+            var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+            document.getElementById('demo').innerHTML = randomItem ;
+            }
+
+        </script>
+    </body>
+</html>
