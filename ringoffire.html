@@ -2,6 +2,7 @@
 <html>
     <header>
         <link rel = "stylesheet" type = "text/css" href = "https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Macondo|Poiret+One" rel="stylesheet">
     </header>
     <body>
         <div class="content">
@@ -24,7 +25,8 @@
                 color:white;
             }
             p {
-                
+                max-width: 500px;
+                text-align: center;
             }
             .beerImg1{
                 right:0;
@@ -46,11 +48,10 @@
             }
 
             .content {
-                position:absolute;
-                top:50%;
-                left:50%;
-                margin-left:-100px;/* half width*/
-                margin-top:-300px;/* half height*/
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
             button {
                 position: relative;
@@ -74,7 +75,6 @@
                 -ms-transition: all .1s ease;
                 -o-transition: all .1s ease;
                 transition: all .1s ease;
-                margin-left:15px;
                 margin-bottom: 20px;
             }
             button:active {
@@ -87,36 +87,129 @@
             button:focus {
                 outline:0;
             }
+            h1 {
+                font-family: 'Lobster', cursive;
+                margin: 0;
+            }
+            
+            h2 {
+                font-family: 'Poiret One', cursive;
+                margin: 5;
+            }
         </style>
         <script>
             function cardDice () {
-            var cardBtn = '<button onclick="cardDice();">Click me</button>'
             var myArray = [
-                "Ace: Waterfall." + '<br/>'+'<img class="cardImg" src="img/AS.png"/>',
+                "<h1>Ace of Spades</h1> <h2>Waterfall with pinky fingers out</h2>"+'<img class="cardImg" src="img/AS.png"/>' + '<br/> <p>Everyone starts chugging their drink. A player cannot stop drinking until the person to their right has stopped drinking.</p>',
 
-                "Two: You pick someone to drink" + '<br/>'+'<img class="cardImg" src="img/2S.png"/>',
+                "<h1>Two of Spades</h1> <h2>Pick someone to drink without their hands</h2>" + '<br/>'+'<img class="cardImg" src="img/2S.png"/>'+ '<br/> <p>The player who draws can choose another player who has to drink for a set amount of time.</p>',
 
-                "Three: Me...aka drink your drink bitch" + '<br/>'+'<img class="cardImg" src="img/3S.png"/>',
+                "<h1>Three of Spades</h1> <h2>Me make a toast and Me drink</h2>" + '<br/>'+'<img class="cardImg" src="img/3S.png"/>'+ '<br/> <p>The player who draws must drink.</p>',
 
-                "Four: Filthy Whores" + '<br/>'+'<img class="cardImg" src="img/4S.png"/>',
+                "<h1>Four of Spades</h1> <h2>Touch the floor with your head</h2>" + '<br/>'+'<img class="cardImg" src="img/4S.png"/>'+ '<br/> <p>Everyone at the table must reach down and touch the floor. The last player to do so must drink</p>',
 
-                "Five: Take a Drive" + '<br/>'+'<img class="cardImg" src="img/5S.png"/>',
+                "<h1>Five of Spades</h1> <h2>Guys drink holding hands</h2>" + '<br/>'+'<img class="cardImg" src="img/5S.png"/>'+ '<br/> <p>All of the male players must drink.</p>',
 
-                "Six: Dicks B=D B=D B=D" + '<br/>'+'<img class="cardImg" src="img/6S.png"/>',
+                "<h1>Six of Spades</h1> <h2>Chicks drink another persons drink</h2>" + '<br/>'+'<img class="cardImg" src="img/6S.png"/>'+ '<br/> <p>All of the female players must drink.</p>',
 
-                "Seven: Hands up toward da lord" + '<br/>'+'<img class="cardImg" src="img/7S.png"/>',
+                "<h1>Seven of Spades</h1> <h2>Put your feet up toward Heaven</h2>" + '<br/>'+'<img class="cardImg" src="img/7S.png"/>'+ '<br/> <p>Everyone at the table must put both hands...or in this case feet.. in the air. The last player to do so must drink.</p>',
 
-                "Eight: Drank Mate" + '<br/>'+'<img class="cardImg" src="img/8S.png"/>',
+                "<h1>Eight of Spades</h1> <h2>Pick a mate to highfive you each drink</h2>" + '<br/>'+'<img class="cardImg" src="img/8S.png"/>'+ '<br/> <p>The player who draws picks another player to be their “mate.” The mate must drink every time the original player does, and vice versa. This keeps going until another 8 is drawn.</p>',
 
-                "Nine: Bust a Rhyme" + '<br/>'+'<img class="cardImg" src="img/9S.png"/>',
+                "<h1>Nine of Spades</h1> <h2>Bust a Rhyme to Rap music</h2>" + '<br/>'+'<img class="cardImg" src="img/9S.png"/>'+ '<br/> <p>The player who draws must say one line. The other players have 5 seconds to say another line that rhymes with the original one. The first player who repeats or fails to think of a rhyme must drink.</p>',
 
-                "Ten: Categories" + '<br/>'+'<img class="cardImg" src="img/10S.png"/>',
+                "<h1>Ten of Spades</h1> <h2>Categories of your choice</h2>" + '<br/>'+'<img class="cardImg" src="img/10S.png"/>'+ '<br/> <p>The player who draws must declare a category and start with the first. The other players have 5 seconds to add to the category list. The first player who repeats or fails to think of one must drink.</p>',
 
-                "Jack: Throw it Back" + '<br/>'+'<img class="cardImg" src="img/JS.png"/>',
+                "<h1>Jack of Spades</h1> <h2>Reverse back the rotation</h2>"  + '<br/>'+'<img class="cardImg" src="img/JS.png"/>'+ '<br/> <p>The rotation of turns is reversed.</p>',
 
-                "Queen: Questionmaster" + '<br/>'+'<img class="cardImg" src="img/QS.png"/>',
+               "<h1>Queen of Spades</h1> <h2>Question Master</h2>" + '<br/>'+'<img class="cardImg" src="img/QS.png"/>'+ '<br/> <p>The player who draws can ask questions. Whoever answers must drink. This continues until another player draws a Queen.</p>',
 
-                "King: Make a rule for your peasents" + '<br/>'+'<img class="cardImg" src="img/KS.png"/>'
+                "<h1>King of Spades</h1> <h2>Make a rule for one person</h2>" + '<br/>'+'<img class="cardImg" src="img/KS.png"/>'+ '<br/> <p>The player who draws can make what ever rule they want for one person.</p>',
+                //End Spades
+                
+                //Start of Hearts
+                "<h1>Ace of Hearts</h1> <h2>Waterfall with drink 1+ inch away from mouth</h2>"+'<img class="cardImg" src="img/AH.png"/>' + '<br/> <p>Everyone starts chugging their drink. A player cannot stop drinking until the person to their right has stopped drinking.</p>',
+
+                "<h1>Two of Hearts</h1> <h2>Pick someone to drink</h2>" + '<br/>'+'<img class="cardImg" src="img/2H.png"/>'+ '<br/> <p>The player who draws can choose another player who has to drink for a set amount of time.</p>',
+
+                "<h1>Three of Hearts</h1> <h2>Me drink for 5 seconds</h2>" + '<br/>'+'<img class="cardImg" src="img/3H.png"/>'+ '<br/> <p>The player who draws must drink.</p>',
+
+                "<h1>Four of Hearts</h1> <h2>Touch the floor with your drink</h2>" + '<br/>'+'<img class="cardImg" src="img/4H.png"/>'+ '<br/> <p>Everyone at the table must reach down and touch the floor. The last player to do so must drink</p>',
+
+                "<h1>Five of Hearts</h1> <h2>Guys drink</h2>" + '<br/>'+'<img class="cardImg" src="img/5H.png"/>'+ '<br/> <p>All of the male players must drink.</p>',
+
+                "<h1>Six of Hearts</h1> <h2>Chicks drink holding hands</h2>" + '<br/>'+'<img class="cardImg" src="img/6H.png"/>'+ '<br/> <p>All of the female players must drink.</p>',
+
+                "<h1>Seven of Hearts</h1> <h2>Put your drinks up toward Heaven</h2>" + '<br/>'+'<img class="cardImg" src="img/7H.png"/>'+ '<br/> <p>Everyone at the table must put both hands...or in this case drinks... in the air. The last player to do so must drink.</p>',
+
+                "<h1>Eight of Hearts</h1> <h2>Pick a mate</h2>" + '<br/>'+'<img class="cardImg" src="img/8H.png"/>'+ '<br/> <p>The player who draws picks another player to be their “mate.” The mate must drink every time the original player does, and vice versa. This keeps going until another 8 is drawn.</p>',
+
+                "<h1>Nine of Hearts</h1> <h2>Bust a Rhyme about love</h2>" + '<br/>'+'<img class="cardImg" src="img/9H.png"/>'+ '<br/> <p>The player who draws must say one line. The other players have 5 seconds to say another line that rhymes with the original one. The first player who repeats or fails to think of a rhyme must drink.</p>',
+
+                "<h1>Ten of Hearts</h1> <h2>Categories of Love</h2>" + '<br/>'+'<img class="cardImg" src="img/10H.png"/>'+ '<br/> <p>The player who draws must declare a category and start with the first. The other players have 5 seconds to add to the category list. The first player who repeats or fails to think of one must drink.</p>',
+
+                "<h1>Jack of Hearts</h1> <h2>Throw it back</h2>"  + '<br/>'+'<img class="cardImg" src="img/JH.png"/>'+ '<br/> <p>The last person who went drinks.</p>',
+
+               "<h1>Queen of Hearts</h1> <h2>Quiz Master </h2>" + '<br/>'+'<img class="cardImg" src="img/QH.png"/>'+ '<br/> <p>The player who draws can ask pop quiz questions. Whoever answers wrong must drink. This continues until another player draws a Queen.</p>',
+
+                "<h1>King of Hearts</h1> <h2>Make a rule</h2>" + '<br/>'+'<img class="cardImg" src="img/KS.png"/>'+ '<br/> <p>The player who draws can make what ever rule they want.</p>',
+                //END of Hearts
+                
+                //Start of Diamonds
+                "<h1>Ace of Diamonds</h1> <h2>Classic Waterfall</h2>"+'<img class="cardImg" src="img/AD.png"/>' + '<br/> <p>Everyone starts chugging their drink. A player cannot stop drinking until the person to their right has stopped drinking.</p>',
+
+                "<h1>Two of Diamonds</h1> <h2>Pick someone to drink your drink</h2>" + '<br/>'+'<img class="cardImg" src="img/2D.png"/>'+ '<br/> <p>The player who draws can choose another player who has to drink for a set amount of time.</p>',
+
+                "<h1>Three of Diamonds</h1> <h2>Me drink for 10 seconds</h2>" + '<br/>'+'<img class="cardImg" src="img/3D.png"/>'+ '<br/> <p>The player who draws must drink.</p>',
+
+                "<h1>Four of Diamonds</h1> <h2>Touch the floor</h2>" + '<br/>'+'<img class="cardImg" src="img/4D.png"/>'+ '<br/> <p>Everyone at the table must reach down and touch the floor. The last player to do so must drink</p>',
+
+                "<h1>Five of Diamonds</h1> <h2>Guys help each other drink</h2>" + '<br/>'+'<img class="cardImg" src="img/5D.png"/>'+ '<br/> <p>All of the male players must drink.</p>',
+
+                "<h1>Six of Diamonds</h1> <h2>Chicks help each other drink</h2>" + '<br/>'+'<img class="cardImg" src="img/6D.png"/>'+ '<br/> <p>All of the female players must drink.</p>',
+
+                "<h1>Seven of Diamonds</h1> <h2>Put your hands up toward Heaven</h2>" + '<br/>'+'<img class="cardImg" src="img/7D.png"/>'+ '<br/> <p>Everyone at the table must put both hands in the air. The last player to do so must drink.</p>',
+
+                "<h1>Eight of Diamonds</h1> <h2>Pick a mate and Cheers each Drink</h2>" + '<br/>'+'<img class="cardImg" src="img/8D.png"/>'+ '<br/> <p>The player who draws picks another player to be their “mate.” The mate must drink every time the original player does, and vice versa. This keeps going until another 8 is drawn.</p>',
+
+                "<h1>Nine of Diamonds</h1> <h2>Bust a Rhyme about Money</h2>" + '<br/>'+'<img class="cardImg" src="img/9D.png"/>'+ '<br/> <p>The player who draws must say one line. The other players have 5 seconds to say another line that rhymes with the original one. The first player who repeats or fails to think of a rhyme must drink.</p>',
+
+                "<h1>Ten of Diamonds</h1> <h2>Categories of Wealth</h2>" + '<br/>'+'<img class="cardImg" src="img/10D.png"/>'+ '<br/> <p>The player who draws must declare a category and start with the first. The other players have 5 seconds to add to the category list. The first player who repeats or fails to think of one must drink.</p>',
+
+                "<h1>Jack of Diamonds</h1> <h2>Everyone dance for 5 seconds</h2>"  + '<br/>'+'<img class="cardImg" src="img/JD.png"/>'+ '<br/> <p>The last person who went drinks.</p>',
+
+               "<h1>Queen of Diamonds</h1> <h2>Know it all Master </h2>" + '<br/>'+'<img class="cardImg" src="img/QD.png"/>'+ '<br/> <p>Anything you say can not be refuted. Those who disagree drink. This continues until another player draws a Queen.</p>',
+
+                "<h1>King of Diamonds</h1> <h2>Make a rule for your poor, poor peasants</h2>" + '<br/>'+'<img class="cardImg" src="img/KD.png"/>'+ '<br/> <p>The player who draws can make what ever rule they want.</p>',
+                //END Diamonds
+                
+                //Start of Clubs
+                "<h1>Ace of Clubs</h1> <h2>Pick someone to finish their drink</h2>"+'<img class="cardImg" src="img/AC.png"/>' + '<br/> <p>Everyone starts chugging their drink while person of choice is finishing their drink. All players cannot stop drinking until the choosen person finishes.</p>',
+
+                "<h1>Two of Clubs</h1> <h2>Pick someone to skip their next turn</h2>" + '<br/>'+'<img class="cardImg" src="img/2C.png"/>'+ '<br/> <p>The player who draws can choose another player who has to skip their next turn.</p>',
+
+                "<h1>Three of Clubs</h1> <h2>Me drink</h2>" + '<br/>'+'<img class="cardImg" src="img/3C.png"/>'+ '<br/> <p>The player who draws must drink.</p>',
+
+                "<h1>Four of Clubs</h1> <h2>Touch the floor with your elbow</h2>" + '<br/>'+'<img class="cardImg" src="img/4C.png"/>'+ '<br/> <p>Everyone at the table must reach down and touch the floor. The last player to do so must drink</p>',
+
+                "<h1>Five of Clubs</h1> <h2>Guys drink</h2>" + '<br/>'+'<img class="cardImg" src="img/5C.png"/>'+ '<br/> <p>All of the male players must drink.</p>',
+
+                "<h1>Six of Clubs</h1> <h2>Chicks drink</h2>" + '<br/>'+'<img class="cardImg" src="img/6C.png"/>'+ '<br/> <p>All of the female players must drink.</p>',
+
+                "<h1>Seven of Clubs</h1> <h2>Put your ______ toward Heaven</h2>" + '<br/>'+'<img class="cardImg" src="img/7C.png"/>'+ '<br/> <p>Everyone at the table must put ???? in the air. The last player to do so must drink.</p>',
+
+                "<h1>Eight of Clubs</h1> <h2>Pick a mate and _____ each Drink</h2>" + '<br/>'+'<img class="cardImg" src="img/8C.png"/>'+ '<br/> <p>The player who draws picks another player to be their “mate.” The mate must drink every time the original player does, and vice versa. This keeps going until another 8 is drawn.</p>',
+
+                "<h1>Nine of Clubs</h1> <h2>Bust a Rhyme about _____</h2>" + '<br/>'+'<img class="cardImg" src="img/9C.png"/>'+ '<br/> <p>The player who draws must say one line. The other players have 5 seconds to say another line that rhymes with the original one. The first player who repeats or fails to think of a rhyme must drink.</p>',
+
+                "<h1>Ten of Clubs</h1> <h2>Categories of ______</h2>" + '<br/>'+'<img class="cardImg" src="img/10C.png"/>'+ '<br/> <p>The player who draws must declare a category and start with the first. The other players have 5 seconds to add to the category list. The first player who repeats or fails to think of one must drink.</p>',
+
+                "<h1>Jack of Clubs</h1> <h2>Throw a drink back</h2>"  + '<br/>'+'<img class="cardImg" src="img/JC.png"/>'+ '<br/> <p>The last person who went drinks.</p>',
+
+               "<h1>Queen of Clubs</h1> <h2>Everyone must call you highness </h2>" + '<br/>'+'<img class="cardImg" src="img/QC.png"/>'+ '<br/> <p>Anything someone says to you must end in "your highness". This continues until another player draws a Queen.</p>',
+
+                "<h1>King of Clubs</h1> <h2>Make a rule</h2>" + '<br/>'+'<img class="cardImg" src="img/KC.png"/>'+ '<br/> <p>The player who draws can make what ever rule they want.</p>'
+                
             ];
             var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
             document.getElementById('demo').innerHTML = randomItem ;
