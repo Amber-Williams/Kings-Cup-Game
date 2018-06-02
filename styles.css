@@ -1,0 +1,173 @@
+body {
+    background-color: #75B26F;
+    font-family: 'Helvetica';
+    color:white;
+}
+p {
+    max-width: 500px;
+    text-align: center;
+    margin: 0;
+}
+.banner {
+    width:30%;
+    margin-bottom:10px;
+}
+.backCardImg {
+    width:15%;
+}
+.cardImg {
+    width:35%;
+}
+.beerImg1{
+    right:0;
+    bottom: 0;
+    position: absolute;
+    width:15%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.beerImg2{
+    left:0;
+    bottom: 0;
+    position: absolute;
+    width:15%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    background-color: #4b6d7c;
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 4px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px #3c5762;
+    -moz-box-shadow:0px 9px 0px #3c5762;
+    box-shadow: 0px 9px 0px #3c5762;
+    width: 180px;
+    text-align: center;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+    margin-bottom: 20px;
+}
+button:active {
+    -webkit-box-shadow: 0px 3px 0px #3c5762;
+    -moz-box-shadow: 0px 3px 0px #3c5762;
+    box-shadow: 0px 3px 0px #3c5762;
+    position: relative;
+    top: 6px;
+}
+button:focus {
+    outline:0;
+}
+h1 {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Poiret One', cursive;
+    margin: 5;
+}
+@media only screen and (max-width: 750px){
+    .banner{
+        width: 35%;
+    }    
+    .backCardImg {
+        width:30%;
+    }
+    .cardImg {
+        width:40%;
+    }
+    h1 {
+        font-size:2rem;
+    }
+    
+    h2 {
+        font-size:1.5rem;
+    }
+    p {
+        font-size:1rem;
+    }
+    .beerImg1, .beerImg2 {
+        width:20%;
+    }
+    button {
+        font-weight: 500;
+        font-size: 1.5rem;
+        padding: 4px;
+        -webkit-box-shadow: 0px 4px 0px #3c5762;
+        -moz-box-shadow:0px 4px 0px #3c5762;
+        box-shadow: 0px 4px 0px #3c5762;
+        width: 160px;
+    }
+    button:active {
+        -webkit-box-shadow: 0px 1px 0px #3c5762;
+        -moz-box-shadow: 0px 1px 0px #3c5762;
+        box-shadow: 0px 3px 1px #3c5762;
+        position: relative;
+        top: 3px;
+    }
+  } 
+
+
+@media only screen and (max-width: 500px){
+    .banner{
+        width: 40%;
+    }    
+    .backCardImg {
+        width:55%;
+    }
+    .cardImg {
+        width:60%;
+    }
+    h1 {
+        font-size:1.7rem;
+    }
+    
+    h2 {
+        font-size:1.3rem;
+    }
+    p {
+        font-size:0.9rem;
+    }
+  } 
+  @media only screen and (max-width: 350px){
+    .banner{
+        width: 35%;
+    }    
+    .backCardImg {
+        width:50%;
+    }
+    .cardImg {
+        width:55%;
+    }
+    h1 {
+        font-size:1.6rem;
+    }
+    
+    h2 {
+        font-size:1.2rem;
+    }
+    p {
+        font-size:0.8rem;
+    }
+  } 
