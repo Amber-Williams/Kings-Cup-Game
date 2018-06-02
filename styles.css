@@ -13,7 +13,7 @@ p {
     margin-bottom:10px;
 }
 .backCardImg {
-    width:15%;
+    width:25%;
 }
 .cardImg {
     width:35%;
@@ -29,6 +29,7 @@ p {
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
+    z-index: -1;
 }
 
 .beerImg2{
@@ -36,6 +37,7 @@ p {
     bottom: 0;
     position: absolute;
     width:15%;
+    z-index: -1;
 }
 
 .content {
@@ -90,6 +92,10 @@ h2 {
 @media only screen and (max-width: 750px){
     .banner{
         width: 35%;
+        left: 1px;
+        top: 15px;
+        position: absolute;
+        transform: rotate(-20deg);
     }    
     .backCardImg {
         width:30%;
@@ -118,6 +124,7 @@ h2 {
         -moz-box-shadow:0px 4px 0px #3c5762;
         box-shadow: 0px 4px 0px #3c5762;
         width: 160px;
+        margin-top: 55px;
     }
     button:active {
         -webkit-box-shadow: 0px 1px 0px #3c5762;
@@ -137,7 +144,7 @@ h2 {
         width:55%;
     }
     .cardImg {
-        width:60%;
+        width:50%;
     }
     h1 {
         font-size:1.7rem;
